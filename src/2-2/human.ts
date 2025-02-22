@@ -1,6 +1,6 @@
 import { UUID, randomUUID } from "crypto";
 
-class Human {
+class Human2_2 {
     id: UUID
     bloodType: string
     birthday: Date
@@ -17,7 +17,7 @@ class Human {
 
 
 const main2_2 = () => {
-    const human = new Human("A", new Date("1990-01-01"), "test taro")
+    const human = new Human2_2("A", new Date("1990-01-01"), "test taro")
     console.log(human)
 }
 
