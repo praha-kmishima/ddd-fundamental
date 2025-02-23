@@ -1,8 +1,8 @@
 class Human {
-    private readonly id: ID
-    private bloodType: BloodType
-    private birthDay: BirthDay
-    private name: Name
+    public readonly id: ID
+    public bloodType: BloodType
+    public birthDay: BirthDay
+    public name: Name
 
     constructor(id: ID, bloodType: BloodType, birthDay: BirthDay, name: Name) {
         this.id = id
@@ -13,7 +13,7 @@ class Human {
 }
 
 class ID {
-    private readonly id: string
+    public readonly id: string
     constructor(value: string) {
         if (!this.validId(value)) {
             throw new Error("無効なID形式です。英数字のみ使用できます");
@@ -28,7 +28,7 @@ class ID {
 }
 
 class BloodType {
-    private readonly bloodType: string
+    public readonly bloodType: string
     constructor(value: string) {
         if (!this.validBloodType(value)) {
             throw new Error("無効な血液型です。A, B, O, ABのいずれかを指定してください");
@@ -46,7 +46,7 @@ class BloodType {
 }
 
 class BirthDay {
-    private readonly birthDay: Date
+    public readonly birthDay: Date
     constructor(value: Date) {
         if (!this.validBirthDay(value)) {
             throw new Error("無効な生年月日です。２０歳未満の方は登録できません");
@@ -63,7 +63,7 @@ class BirthDay {
 }
 
 class Name {
-    private readonly name: string
+    public readonly name: string
     constructor(value: string) {
         if (!this.validName(value)) {
             throw new Error("無効な名前です。名前は20文字以内で指定してください");
